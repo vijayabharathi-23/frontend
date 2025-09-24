@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body>
+        <button id="1">add</button>
+        <button id="2">clear</button>
+        <div id="main"></div>
+<script>
+    let b1 = document.getElementById("1");
+    let b2 = document.getElementById("2");
+    let main = document.getElementById("main");
+
+    b1.addEventListener("click", function () {
+        let img = document.createElement("img");
+        img.src = "watch3.jpg"; // corrected property name
+        img.height = 100;       // use numbers, not '100px'
+        img.width = 100;
+        main.append(img);       // append the element, not the string
+    });
+
+    b2.addEventListener("click", function () {
+        main.innerHTML = "";    // clears the images
+    });
+</script>
+<!-- ...existing code... -->
+    </body>
+</html>

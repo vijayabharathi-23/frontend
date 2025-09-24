@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- write a program to achieve event bubbling and try to achieve propagation -->
+<p id="p1"></p>
+<div onclick="divclick(event)">
+    <button onclick="buttonclick(event)">Add</button>
+</div>
+
+<script>
+function divclick(e){
+    document.getElementById("p1").innerHTML = "div was clicked";
+}
+function buttonclick(e){
+    e.stopPropagation(); // Prevent bubbling to div
+    document.getElementById("p1").innerHTML = "button was clicked";
+}
+</script>
+</body>
+</html>

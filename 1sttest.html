@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- fetch the jsonplaceholder api and achieve pagination -->
+<input type="text" onchange="changetext(this)">
+<button onclick="clickapi()">click</button>
+<p id="p1"></p>
+
+</body>
+<script>
+    let transactionid = 0;
+    function changetext(e){
+        transactionid = parseInt(e.value);
+    }
+    function clickapi(){
+        fetch("https://fake.jsonmockapi.com/transactions?length=" + transactionid)
+        .then((re)=>re.json())
+        .then((res)=>{
+            console.log(res);
+            let result = "";
+            for(let i=0; i<res.length; i++){
+                result += res[i].amount
+            }
+            document.getElementById("p1").innerHTML = result;
+        })
+    }
+</script>
+</html>

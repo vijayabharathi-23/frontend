@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button disabled="click1()">show hide</button>
+    <p id="p1">show there</p>
+    <input onchange="opentext(this)" type="text">
+</body>
+<script>
+    let flag=true;
+    function opentext(e){
+        console.log(e.value);
+        if(e.value=="MYSELF"){
+            document.getElementsByTagName("button")[0].disabled=false;
+        }
+        document.getElementById("p1").innerText=e.value;
+}  
+
+function click1(){
+    flag=!flag;
+    if(flag){
+           document.getElementById("p1").style.display="block"
+ 
+    }else{
+            document.getElementById("p1").style.display="none"
+
+    }
+}
+document.getElementsByTagName("button")[0].addEventListener("click",click1)
+</script>
+</html>

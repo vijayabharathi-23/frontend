@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onchange="changetext(this)">
+    <button onclick="callapi()">get transactions</button>
+    <p style="display: none;" id="load">Loading...</p>
+    <div id="d1"></div>
+    <script>
+        let transactionid=0;
+        function changetext(e){
+transactionid=parseInt(e.value)
+        }
+        function callapi(){
+            document.getElementById("load").style.display="block"
+fetch("https://fake.jsonmockapi.com/transactions?length="+transactionid)
+        .then((re)=>re.json())
+        .then((res)=>{
+            console.log(res)
+            document.getElementById("load").style.display="none"
+            for(let i=0;i<res.length;i++){
+                let newptag=document.createElement("p")
+                newptag.innerHTML=res[i].amount; 
+                document.getElementById("d1").append(newptag) 
+
+                 let newp1tag=document.createElement("p")
+                 newp1tag.innerText=res[i].paymentMethod;
+                 document.getElementById("d1").append(newp1tag)
+            }
+        })
+        }
+            
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    #main{
+        height: 100vh;
+        width:100vw;
+        background-color: black;
+        position: relative;
+    }
+    #sub1{
+        height: 80%;
+        width: 25vw;
+        background-color: aqua;
+        border-radius: 20px;
+        position: absolute;
+        top: 70px;
+        left: 50px;
+        
+    }
+    #sub11{
+        width:25vw;
+        height: 65vh;
+        background-color: blue;
+        position: absolute;
+        left: 50px;
+        border-radius: 20px;
+        top: 95%;
+        
+        
+
+    }
+    #sub12{
+        width:25vw;
+        height: 65vh;
+        background-color: blue;
+        position: absolute;
+        left: 50px;
+        border-radius: 20px;
+        top: 165%;
+                
+
+    }
+    #pic11{
+        width: 100%;
+        height: 72%;
+        border-top-left-radius:20px ;
+        border-top-right-radius:20px ;
+    }
+    #sub2{
+        height: 110%;
+        width: 65vw;
+        background-color:blueviolet;
+        border-radius: 20px;
+        position: absolute;
+        top: 70px;
+        left: 30vw;
+    }
+    #sub3{
+        width: 20vw;
+        height: 200px;
+        background-color: blue;
+        position: absolute;
+        top: 123%;
+        left: 30vw;
+                border-radius: 20px;
+
+    }
+    #sub31{
+        width: 20vw;
+        height: 200px;
+        background-color: blue;
+        position: absolute;
+        top: 123%;
+        left: 52vw;
+                border-radius: 20px;
+
+    }
+     #sub32{
+          width: 20vw;
+        height: 350px;
+        position: absolute;
+        top: 110%;
+        left: 73vw;
+
+                border-radius: 30x;  
+
+    }
+    #first{
+        width: 100%;
+        height: 100%;
+        box-shadow: 10 10 10 10;
+        border-radius: 30px;
+                border: 20px black solid;
+
+    }
+    #about{
+        position: absolute;
+        top: 170%;
+        left: 30vw;
+    }
+    #box1{
+        height: 50vh;
+        width: 33vw;
+        background-color: brown;
+        border-radius: 20px;
+        margin-top: 43.5%;
+        margin-left: 65%;
+
+    }
+     #box2{
+        height: 50vh;
+        width: 33vw;
+        background-color: brown;
+        position: absolute;
+        left: 30%;
+        bottom: -145%;
+        border-radius: 20px;
+         
+
+    }
+    #box3{
+        height: 50vh;
+        width: 33vw;
+        background-color: brown;
+        position: absolute;
+        left: 30%;
+        bottom: -200%;
+        border-radius: 20px;
+         
+
+    }
+    #box4{
+       height: 50vh;
+        width: 33vw;
+        background-color: brown;
+        border-radius: 20px;
+        margin-top: 1.5%;
+        margin-left: 65%;
+
+    }
+    #box5{
+        width: 13vw;
+        height: 38vh;
+        background-color: blueviolet;
+        border-radius: 20px;
+        margin-left: 30%;
+    }
+
+    #sidebox5{
+width: 45vw;
+        height: 38vh;
+        background-color: blueviolet;
+        border-radius: 20px;
+        margin-left: 130%;
+        position: relative;
+        
+    }
+    #box6{
+         width: 13vw;
+        height: 38vh;
+        background-color: blueviolet;
+        border-radius: 20px;
+        margin-left: 30%;
+        margin-top: 50px;
+    }
+    
+    #sidebox6{
+        width: 45vw;
+        height: 38vh;
+        background-color: blueviolet;
+        border-radius: 20px;
+        margin-left: 130%;
+        position: relative;
+        
+    }
+    #box7{
+        width: 13vw;
+        height: 38vh;
+        background-color: blueviolet;
+        border-radius: 20px;
+        margin-left: 30%;
+        margin-top: 50px;
+    }
+    #sidebox7{
+        width: 45vw;
+        height: 38vh;
+        background-color: blueviolet;
+        border-radius: 20px;
+        margin-left: 130%;
+        position: relative;
+    }
+    #pic{
+        width: 62vw;
+        height: 100vh;
+        margin-left: 30%;
+       margin-top: 30px; 
+       border-radius: 20px;
+    }
+    #pic1{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    #box8{
+        position: relative;
+    }
+    #box81{
+        width: 22vw;
+        height: 32vh;
+        background-color: blue;
+        border-radius: 20px;
+        position: absolute;
+        left: 32%;
+        top: 10vh;
+    }
+    #box82{
+        width: 22vw;
+        height: 32vh;
+        background-color: blue;
+        border-radius: 20px;
+        position: absolute;
+        left: 32%;
+        top: 45vh;
+    }
+    #box83{
+        width: 18vw;
+        height: 68vh;
+        background-color: blue;
+        border-radius: 20px;
+        position: absolute;
+        left:56%;
+        top: 10vh;
+    }
+    #box84{
+        width: 18vw;
+        height: 68vh;
+        background-color: blue;
+        border-radius: 20px;
+        position: absolute;
+        left:76%;
+        top: 10vh;
+    }
+    #photo1{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+#photo{
+    width: 60vw;
+    height: 60vh;
+    background-color: aqua;
+    position: absolute;
+    top: 645%;
+    left: 33%;
+    border-radius:20px;
+}
+#last{
+    position: relative;
+}
+#last1{
+    width: 28vw;
+    height: 75vh;
+    border-radius: 20px;
+    background-color: blueviolet;
+    position: absolute;
+    left: 25px;
+    margin-top: 74%;
+}
+#last2{
+    width: 25vw;
+    height: 75vh;
+    border-radius: 20px;
+    background-color: blueviolet;
+    position: absolute;
+    left: 33%;
+    margin-top: 74%;
+}
+ #last3{
+    width: 33vw;
+    height: 75vh;
+    border-radius: 20px;
+    background-color: blueviolet;
+    position: absolute;
+    left: 61%;
+    margin-top: 74%;
+} 
+
+</style>
+<body style="background-color: black;">
+    <div id="overall">
+    <div id="main">
+        <div id="sub1">
+
+        </div>
+        <div id="sub11">
+<img id="pic11" src="https://cdn.prod.website-files.com/684933c2f79fbc8094062e06/684a7c095f79af2865095cc0_image.png" alt="">
+        </div>
+        <div id="sub12">
+
+        </div>
+        <div id="sub2">
+
+        </div>
+        <div id="sub3">
+
+        </div>
+        <div id="sub31">
+
+        </div>
+        <div id="sub32">
+<img id="first" src="https://cdn.prod.website-files.com/684933c2f79fbc8094062e06/685cf1d4f3d741f27c335d07_Meetup%2001.jpg" alt="">
+        </div>
+        
+    </div>
+    <div id="about">
+            <h1 style="color: green; ">About us</h1>
+            <h2 style="color: white; font-size: -large;">The No-Code Movement Local & Personal</h2>
+
+        </div>
+        <p style="color: white; font-size: large; position: absolute;top: 178%;left: 65vw;">No-code tools have opened doors to creators everywhere. <br>But building is better together.</p> 
+<div id="box1">
+    
+    </div>
+    <div id="box2"> 
+
+    </div>
+    <div id="box3">
+
+    </div>
+    <div id="box4">
+
+    </div>
+</div>
+<br><br>
+<h2 style="color: green; margin-left: 50%;">UPCOMING SCHEDULE</h2>
+<h2 style="color:white; margin-left: 40%; font-size: 50px; padding: 0; ">MEETUP & WORKSHOP</h2>
+<div id="box5">
+<div id="sidebox5">
+
+</div>
+</div>
+
+<div id="box6">
+<div id="sidebox6">
+
+</div>
+</div>
+<div id="box7">
+
+    <div id="sidebox7">
+
+    </div>
+</div>
+<div id="pic">
+   <img id="pic1" src="https://cdn.prod.website-files.com/684933c2f79fbc8094062e06/685d12028bdd5b2c920f78b0_Meetup%20001.jpg" alt=""> --> -->
+</div>
+<div id="box8">
+<div id="box81">
+
+</div>
+<div id="box82">
+
+</div>
+<div id="box83">
+
+</div>
+<div id="box84">
+
+</div>
+</div>
+<div id="photo">
+<img id="photo1" src="https://cdn.prod.website-files.com/684933c2f79fbc8094062e06/6861fa40aa8539d3937cc0f1_MeetUp.png" alt=""> -->
+</div>
+<div id="last">
+    <div id="last1">
+
+    </div>
+    <div id="last2">
+
+    </div>
+    <div id="last3">
+
+    </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!-- ...existing code... -->
+<body>
+    <!-- GET POST PUT DELETE -->
+    <input type="text" onchange="changeText(this)">
+    <button onclick="callApi()">Get Transaction</button>
+    <p id="load" style="display: none;">Loading......</p>
+    <button onclick="nextBtn()">next</button>
+    <button onclick="clearAll()">Clear</button> <!-- Add this button -->
+    <div id="d1"></div>
+
+    <script>
+        let rp = [];
+        let start = 0;
+        let end = 10;
+
+        function nextBtn() {
+            start += 10;
+            end += 10;
+            for (let i = start; i < end && i < rp.length; i++) {
+                let newPtag = document.createElement("p");
+                newPtag.innerText = rp[i].amount;
+                document.getElementById("d1").append(newPtag);
+            }
+        }
+
+        let transactionId = 0;
+        function changeText(e) {
+            transactionId = parseInt(e.value);
+        }
+
+        function callApi() {
+            document.getElementById("load").style.display = "block";
+            fetch("https://fake.jsonmockapi.com/transactions?length=" + transactionId)
+                .then((re) => re.json())
+                .then((data) => {
+                    rp = data;
+                    document.getElementById("load").style.display = "none";
+                    document.getElementById("d1").innerHTML = ""; // Clear previous
+                    start = 0;
+                    end = 10;
+                    for (let i = start; i < end && i < rp.length; i++) {
+                        let newPtag = document.createElement("p");
+                        newPtag.innerText = rp[i].amount;
+                        document.getElementById("d1").append(newPtag);
+                    }
+                });
+        }
+
+        function clearAll() {
+            document.getElementById("d1").innerHTML = ""; // Clears all transactions
+        }
+    </script>
+<!-- ...existing code... -->
+</body>
+<!-- ...existing code... -->

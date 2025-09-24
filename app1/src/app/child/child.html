@@ -1,0 +1,14 @@
+ <p ngClass="title">child works!</p>
+<p appCustom>i am from child{{title}}</p>
+<input [type]="title" [(ngModel)]="val">
+<button (click)="login()">Login</button>
+<button (click)="callparent()">go to parent</button>
+<p *ngFor="let a of arr">{{a}}</p>
+<div [ngSwitch]="title">
+
+<p *ngSwitchCase="'Mon'">monday</p>
+<p  *ngSwitchCase="'tue'">tuesday</p>
+<p appCustom *ngSwitchDefault>wednesday</p>
+</div> 
+
+<a [routerLink]="'new'">new.html</a> 

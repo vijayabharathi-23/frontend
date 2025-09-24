@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- fetch the jsonplaceholder api and achieve pagination -->
+    <input type="text" onchange="changetext(this)">
+    <button onclick="clickapi()">click</button>
+    <p id="p1"></p>
+</body>
+<script>
+    let categoryName = "";
+    function changetext(e){
+        categoryName = e.value;
+    }
+    function clickapi(){
+        fetch("https://formatjsononline.com/api/products/categories?name=" + categoryName)
+        .then((re)=>re.json())
+        .then((res)=>{
+            console.log(res);
+            let output = "";
+            for(let i=0; i<res.length; i++){
+                output += res[i].name + "<br>";
+            }
+            document.getElementById("p1").innerHTML = output;
+        })
+    }
+</script>
+</html>

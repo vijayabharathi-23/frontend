@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+    <input type="text" name="username" placeholder="Enter ur username" onchange="changeText1(this)">
+    <input type="password" name="password" placeholder="Enter password" onchange="changeText1(this)">
+    <button onclick="login()">Login</button>
+     <div id="d1">
+
+     </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+     
+               <script>
+    $(document).ready(()=>{
+        $("#jq").text("ijffijfiijf");
+    });
+    let username;
+    let password;
+    function changeText1(e){
+        if(e.name=="username"){
+            username=e.value;
+        }else{
+            password=e.value;
+        }
+    }
+    function login(){
+        console.log(username)
+        if(!username){
+            alert("Invalid username");
+            return;
+        }
+        if(password=="admin123"){
+            localStorage.setItem("user",username);
+            location.href="bom1.html";
+        }else{
+            alert("Invalid password");
+            return;
+        }
+    }
+</script>
+</body>
+</html>

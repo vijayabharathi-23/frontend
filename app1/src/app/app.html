@@ -1,0 +1,18 @@
+<!-- <p>hello</p>
+<p>{{title}}</p>
+<input [(ngModel)]="title"/>
+<button [disabled]="title.length<3">login</button>
+
+//reactive form
+<h1>Reactive</h1>
+<form [formGroup]="formGroup" (ngSubmit)="callForm1()">
+    <input type="text" formControlName="name" >
+    <input type="text" formControlName="email">
+    <input type="text" formControlName="password">
+    <button (click)="callForm1()">submit</button>
+
+
+</form>
+<app-child [title]="title" (toparent)="getvalue($event)"></app-child> -->
+
+<router-outlet></router-outlet>

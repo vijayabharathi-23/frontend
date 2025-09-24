@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   //write a program to achieve event bubbling and try to achive paopagation
+<p id="p1"></p>
+<div onclick="divclick()">
+    <button onclick="buttonclick()"event.stopPropagation()>Add</button>
+</div>
+
+</body>
+<script>
+function divclick(){
+    document.getElementById("p1").innerHTML="div was clicked";
+}
+function buttonclick(){
+    
+        document.getElementById("p1").innerHTML="button was clicked";
+
+}
+</script>
+</html>

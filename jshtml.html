@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <div id="d1">
+
+    </div>
+    <p class="p1">first</p>
+    <p class="p1">middle</p>
+    <p class="p1">last</p>
+    <div id="d2">
+
+    </div>
+    <div id="d3"></div>
+<div id="d4"></div>
+
+
+</body>
+
+<script>
+document.getElementById("p1").innerText= "<strong> Hello javascript! </strong>";
+console.log(document.getElementById("p1").textContent)
+document.getElementById("p2").innerHTML=document.getElementById("p1").textContent;
+let newptag=document.createElement("p")
+newptag.className="p1"
+
+newptag.style.color="blue"
+newptag.innerHTML="<b>New paragraph</b>"
+document.getElementById("d1").append(newptag)
+//  document.getElementById("d1").remove()
+console.log(document.getElementsByClassName("p1"))
+ 
+document.getElementsByClassName("p1")
+
+let onep=document.createElement("p")
+onep.innerHTML="first"
+document.getElementById("d2").append(onep)
+
+let twop=document.createElement("p")
+twop.innerHTML="middle"
+document.getElementById("d3").append(twop)
+
+let threep=document.createElement("p")
+threep.innerHTML="last"
+document.getElementById("d4").append(threep)
+console.log(document.querySelectorAll("p"));
+
+
+</script>
+</html>

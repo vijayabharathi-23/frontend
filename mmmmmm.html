@@ -1,0 +1,33 @@
+<script>
+    let transactionid = 0;
+    function changetext(e){
+        transactionid = parseInt(e.value);
+    }
+    function clickapi(){
+        fetch("https://fake.jsonmockapi.com/transactions?length=" + transactionid)
+        .then((re)=>re.json())
+        .then((res)=>{
+            console.log(res);
+            let output = "";
+            for(let i=0; i<res.length; i++){
+                output += res[i].amount + "<br>";
+            }
+            document.getElementById("p1").innerHTML = output;
+        })
+    }
+</script>
+
+<script>
+    function changetext(){
+        transactionid=parseInt(e.value)
+
+    }
+function clickapi(){
+    fetch("https://fake.jsonmockapi.com/transactions?length")
+    .then((re)=>re.json())
+    .then((res)=>{
+        console.log(res)
+        document.getElementById("p1").innerHTML=res.amount;
+    })
+}
+</script>
