@@ -12,6 +12,10 @@ export class AddProducts {
 
   }
 ngOnInit(){
-this.se.getApi().subscribe
+  console.log(this.se.getApi());
+this.se.getApi().subscribe((res)=>{
+console.log(res); 
+})
 }
 }
+
